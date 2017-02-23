@@ -1,0 +1,26 @@
+//OUR SUPER AWESOME PUBLISH CODE
+
+//DEFINE VARIBILES
+const int buttonpin = 6;
+int buttonstate = 0;
+int randomnumber = 0;
+
+void setup() {
+    //WERE LISING GUYS!
+    pinMode(buttonpin, INPUT);
+//randomSeed(analogRead(0));
+}
+
+void loop() {
+    
+    buttonstate = digitalRead(buttonpin);
+    
+    if (buttonstate == HIGH) {
+        //randNumber = random(10);
+        
+        Particle.publish("party", "itstime");
+    }
+    
+    
+
+}
